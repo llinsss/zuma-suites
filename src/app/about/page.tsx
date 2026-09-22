@@ -49,7 +49,7 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <p className="text-[#C9A84C] text-xs tracking-[0.4em] uppercase mb-4" style={{ fontFamily: "var(--font-inter)" }}>Our Story</p>
           <h1 className="text-5xl sm:text-6xl text-white max-w-2xl" style={{ fontFamily: "var(--font-playfair)" }}>
-            Built for Kaduna.<br />Made for the World.
+            Built in Kaduna.<br />Made for the World.
           </h1>
         </div>
       </section>
