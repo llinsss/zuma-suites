@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://zumasuites.com/sitemap.xml",
+    sitemap: "https://houzzhills.com/sitemap.xml",
   };
 }

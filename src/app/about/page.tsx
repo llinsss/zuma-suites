@@ -7,7 +7,7 @@ import SectionTitle from "@/components/SectionTitle";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Zuma Suites — our story, vision, and the team behind Kaduna's most anticipated luxury serviced apartment complex.",
+    "Learn about Houzz Hills — our story, vision, and the team behind Kaduna's most anticipated luxury serviced apartment complex.",
 };
 
 const TEAM = [
@@ -27,7 +27,7 @@ const TEAM = [
     name: "Tariq Al-Rashid",
     role: "Head of Design & Architecture",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
-    bio: "Internationally acclaimed architect behind projects in Dubai, London, and Lagos. Tariq designed Zuma Suites to honour Kaduna's heritage while projecting its global future.",
+    bio: "Internationally acclaimed architect behind projects in Dubai, London, and Lagos. Tariq designed Houzz Hills to honour Kaduna's heritage while projecting its global future.",
   },
 ];
 
@@ -57,13 +57,13 @@ export default function AboutPage() {
       {/* Story */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div>
-          <SectionTitle eyebrow="The Vision" title="Why Zuma Suites?" />
+          <SectionTitle eyebrow="The Vision" title="Why Houzz Hills?" />
           <div className="space-y-5 mt-6 text-white/60 leading-relaxed" style={{ fontFamily: "var(--font-inter)" }}>
             <p>
-              For too long, executives and professionals visiting Kaduna had to choose between dated government hotels and informal short-let apartments. Zuma Suites was born out of a conviction that Northern Nigeria&apos;s most strategically important city deserved better.
+              For too long, executives and professionals visiting Kaduna had to choose between dated government hotels and informal short-let apartments. Houzz Hills was born out of a conviction that Northern Nigeria&apos;s most strategically important city deserved better.
             </p>
             <p>
-              Named after the iconic Zuma Rock — the towering sentinel that stands at the gateway to Abuja from Kaduna — our suites embody the same strength, permanence, and quiet grandeur of that landmark.
+              Named after the iconic Houzz Hills Rock — the towering sentinel that stands at the gateway to Abuja from Kaduna — our suites embody the same strength, permanence, and quiet grandeur of that landmark.
             </p>
             <p>
               Every design decision, every material selected, every service protocol was crafted with one goal: to create an address that Kaduna can be proud of — and that guests around the world will choose again and again.
@@ -72,7 +72,7 @@ export default function AboutPage() {
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div className="relative h-64 col-span-2">
-            <Image src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Zuma Suites exterior" fill className="object-cover" sizes="50vw" />
+            <Image src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Houzz Hills exterior" fill className="object-cover" sizes="50vw" />
           </div>
           <div className="relative h-44">
             <Image src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&q=80" alt="Suite interior" fill className="object-cover" sizes="25vw" />
@@ -130,7 +130,7 @@ export default function AboutPage() {
               {[
                 { icon: MapPin, text: "15 Ahmadu Bello Way, CBD, Kaduna, Kaduna State, Nigeria" },
                 { icon: Phone, text: "+234 801 234 5678" },
-                { icon: Mail, text: "reservations@zumasuites.com" },
+                { icon: Mail, text: "reservations@houzzhills.com" },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-start gap-3">
                   <Icon size={16} className="text-[#C9A84C] mt-0.5 flex-shrink-0" />

@@ -6,7 +6,7 @@ import { ROOMS } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Reserve Your Suite",
   description:
-    "Secure your early reservation at Zuma Suites Kaduna. Lock in your preferred suite with exclusive pre-launch pricing. Opening November 2026.",
+    "Secure your early reservation at Houzz Hills Kaduna. Lock in your preferred suite with exclusive pre-launch pricing. Opening November 2026.",
 };
 
 export default function ReservePage() {

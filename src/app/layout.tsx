@@ -18,45 +18,45 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zumasuites.com"),
+  metadataBase: new URL("https://houzzhills.com"),
   title: {
-    default: "Zuma Suites Kaduna | Luxury Serviced Apartments",
-    template: "%s | Zuma Suites Kaduna",
+    default: "Houzz Hills Kaduna | Luxury Serviced Apartments",
+    template: "%s | Houzz Hills Kaduna",
   },
   description:
-    "Experience unparalleled luxury at Zuma Suites — Kaduna's premier serviced apartment complex. Opening November 2026. Book your early reservation today.",
+    "Experience unparalleled luxury at Houzz Hills — Kaduna's premier serviced apartment complex. Opening November 2026. Book your early reservation today.",
   keywords: [
     "serviced apartment Kaduna",
     "luxury apartment Kaduna",
     "short let Kaduna",
     "furnished apartment Kaduna State",
     "Kaduna accommodation",
-    "Zuma Suites",
+    "Houzz Hills",
     "Nigeria serviced apartment",
     "corporate housing Kaduna",
   ],
-  authors: [{ name: "Zuma Suites" }],
-  creator: "Zuma Suites",
+  authors: [{ name: "Houzz Hills" }],
+  creator: "Houzz Hills",
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: "https://zumasuites.com",
-    siteName: "Zuma Suites Kaduna",
-    title: "Zuma Suites Kaduna | Luxury Serviced Apartments",
+    url: "https://houzzhills.com",
+    siteName: "Houzz Hills Kaduna",
+    title: "Houzz Hills Kaduna | Luxury Serviced Apartments",
     description:
-      "Experience unparalleled luxury at Zuma Suites — Kaduna's premier serviced apartment complex. Opening November 2026.",
+      "Experience unparalleled luxury at Houzz Hills — Kaduna's premier serviced apartment complex. Opening November 2026.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Zuma Suites Kaduna",
+        alt: "Houzz Hills Kaduna",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zuma Suites Kaduna | Luxury Serviced Apartments",
+    title: "Houzz Hills Kaduna | Luxury Serviced Apartments",
     description: "Kaduna's premier serviced apartment complex. Opening November 2026.",
     images: ["/og-image.jpg"],
   },

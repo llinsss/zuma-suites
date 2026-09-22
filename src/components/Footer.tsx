@@ -9,10 +9,10 @@ export default function Footer() {
         <div className="lg:col-span-1">
           <div className="mb-4">
             <div className="text-3xl tracking-widest uppercase text-[#C9A84C]" style={{ fontFamily: "var(--font-playfair)" }}>
-              Zuma
+              Houzz Hills
             </div>
             <div className="text-[10px] tracking-[0.35em] text-white/40 uppercase" style={{ fontFamily: "var(--font-inter)" }}>
-              Suites · Kaduna
+              Kaduna
             </div>
           </div>
           <p className="text-white/50 text-sm leading-relaxed mb-6" style={{ fontFamily: "var(--font-inter)" }}>
@@ -74,7 +74,7 @@ export default function Footer() {
               "Studio Deluxe",
               "Executive Suite",
               "Two-Bedroom Suite",
-              "The Zuma Penthouse",
+              "The Houzz Hills Penthouse",
             ].map((room) => (
               <li key={room}>
                 <Link
@@ -109,8 +109,8 @@ export default function Footer() {
             </li>
             <li className="flex gap-3 items-center">
               <Mail size={16} className="text-[#C9A84C] flex-shrink-0" />
-              <a href="mailto:reservations@zumasuites.com" className="text-white/50 hover:text-[#C9A84C] text-sm transition-colors" style={{ fontFamily: "var(--font-inter)" }}>
-                reservations@zumasuites.com
+              <a href="mailto:reservations@houzzhills.com" className="text-white/50 hover:text-[#C9A84C] text-sm transition-colors" style={{ fontFamily: "var(--font-inter)" }}>
+                reservations@houzzhills.com
               </a>
             </li>
           </ul>
@@ -129,7 +129,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-[#C9A84C]/10 py-6 px-4 sm:px-6 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-white/30 text-xs" style={{ fontFamily: "var(--font-inter)" }}>
-          © 2026 Zuma Suites Ltd. All rights reserved.
+          © 2026 Houzz Hills Ltd. All rights reserved.
         </p>
         <div className="flex gap-6">
           {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((item) => (

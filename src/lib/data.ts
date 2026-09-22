@@ -70,11 +70,11 @@ export const ROOMS = [
   },
   {
     id: "penthouse",
-    name: "The Zuma Penthouse",
+    name: "The Houzz Hills Penthouse",
     slug: "penthouse",
     tagline: "Above Everything Else",
     description:
-      "The crown of Zuma Suites. Two floors of exquisite living, a private rooftop terrace, plunge pool, and 360° views of Kaduna city — an experience reserved for those who accept nothing but the best.",
+      "The crown of Houzz Hills. Two floors of exquisite living, a private rooftop terrace, plunge pool, and 360° views of Kaduna city — an experience reserved for those who accept nothing but the best.",
     price: 520000,
     pricePer: "night",
     size: "280 sqm",
@@ -106,7 +106,7 @@ export const TESTIMONIALS = [
     name: "David Mensah",
     role: "Senior Consultant, PwC",
     location: "Accra, Ghana",
-    text: "Travelled to Kaduna for a government project and Zuma Suites made a tough assignment genuinely enjoyable. The Executive Suite is better equipped than my apartment back home.",
+    text: "Travelled to Kaduna for a government project and Houzz Hills made a tough assignment genuinely enjoyable. The Executive Suite is better equipped than my apartment back home.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
   },
@@ -128,7 +128,7 @@ export const AMENITIES = [
   { icon: "restaurant", title: "Saffron Restaurant", description: "Award-winning restaurant serving continental and Nigerian cuisine from 6am to midnight." },
   { icon: "security", title: "24/7 Security", description: "Armed security personnel, CCTV surveillance, and biometric access control throughout." },
   { icon: "parking", title: "Secure Parking", description: "Underground parking with CCTV, dedicated spots per suite, and valet service." },
-  { icon: "spa", title: "Zuma Spa & Wellness", description: "Full-service spa with massage rooms, sauna, steam room, and beauty salon." },
+  { icon: "spa", title: "Houzz Hills Spa & Wellness", description: "Full-service spa with massage rooms, sauna, steam room, and beauty salon." },
   { icon: "conference", title: "Conference Facilities", description: "Three fully equipped conference rooms accommodating 10 to 120 delegates." },
   { icon: "kitchen", title: "Fully Stocked Kitchen", description: "Every suite comes with premium appliances, cookware, and a welcome pantry." },
   { icon: "laundry", title: "Laundry & Dry Cleaning", description: "Same-day laundry, dry cleaning, and pressing service available daily." },
@@ -167,12 +167,12 @@ export const BLOG_POSTS = [
 
 export const FAQS = [
   {
-    question: "When does Zuma Suites open?",
-    answer: "Zuma Suites officially opens to the public in November 2026. Early reservations are now open and we are offering exclusive pre-launch rates for guests who book before September 30, 2026.",
+    question: "When does Houzz Hills open?",
+    answer: "Houzz Hills officially opens to the public in November 2026. Early reservations are now open and we are offering exclusive pre-launch rates for guests who book before September 30, 2026.",
   },
   {
-    question: "Where exactly is Zuma Suites located in Kaduna?",
-    answer: "Zuma Suites is located on Ahmadu Bello Way, Central Business District, Kaduna — minutes from Kaduna International Airport and the state government secretariat.",
+    question: "Where exactly is Houzz Hills located in Kaduna?",
+    answer: "Houzz Hills is located on Ahmadu Bello Way, Central Business District, Kaduna — minutes from Kaduna International Airport and the state government secretariat.",
   },
   {
     question: "What is the minimum stay duration?",
@@ -191,11 +191,11 @@ export const FAQS = [
     answer: "Yes. Complimentary airport transfers are included with Executive Suite, Two-Bedroom, and Penthouse bookings. Studio guests can arrange transfers at a subsidised rate through concierge.",
   },
   {
-    question: "Is Zuma Suites pet-friendly?",
+    question: "Is Houzz Hills pet-friendly?",
     answer: "We welcome small, well-behaved pets in select ground-floor suites with prior arrangement. A refundable pet deposit applies. Please contact us before booking.",
   },
   {
     question: "What security measures are in place?",
-    answer: "Zuma Suites features 24/7 armed security, biometric entry, comprehensive CCTV coverage, secure underground parking, and a dedicated security command room.",
+    answer: "Houzz Hills features 24/7 armed security, biometric entry, comprehensive CCTV coverage, secure underground parking, and a dedicated security command room.",
   },
 ];

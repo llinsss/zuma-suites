@@ -6,7 +6,7 @@ import SectionTitle from "@/components/SectionTitle";
 export const metadata: Metadata = {
   title: "Amenities",
   description:
-    "World-class amenities at Zuma Suites Kaduna — rooftop infinity pool, 24/7 power, high-speed WiFi, Zuma Spa, Saffron Restaurant, conference rooms, and more.",
+    "World-class amenities at Houzz Hills Kaduna — rooftop infinity pool, 24/7 power, high-speed WiFi, Houzz Hills Spa, Saffron Restaurant, conference rooms, and more.",
 };
 
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -29,10 +29,10 @@ const AMENITIES = [
   { icon: "generator", title: "24/7 Power Supply", description: "Industrial-grade generator system with automatic transfer switches. Zero perceptible downtime — your devices and appliances stay powered around the clock." },
   { icon: "pool", title: "Rooftop Infinity Pool", description: "Heated rooftop infinity pool with panoramic views of Kaduna city. Open daily from 6am to 10pm, with poolside lounge chairs, umbrellas, and towel service." },
   { icon: "gym", title: "Fully Equipped Gym", description: "State-of-the-art Technogym equipment including treadmills, bikes, free weights, and a dedicated stretch area. Personal training available on request." },
-  { icon: "restaurant", title: "Saffron Restaurant & Bar", description: "Our flagship restaurant serves curated continental and Nigerian cuisine from 6am to midnight. The Zuma Bar operates until 2am, with a cocktail menu crafted by internationally trained mixologists." },
+  { icon: "restaurant", title: "Saffron Restaurant & Bar", description: "Our flagship restaurant serves curated continental and Nigerian cuisine from 6am to midnight. The Houzz Hills Bar operates until 2am, with a cocktail menu crafted by internationally trained mixologists." },
   { icon: "security", title: "24/7 Armed Security", description: "Professionally trained security personnel, perimeter CCTV, biometric access control, and a dedicated security command room monitoring the property at all times." },
   { icon: "parking", title: "Secure Underground Parking", description: "Underground parking with CCTV coverage, designated bays per suite, EV charging points, and full-time valet service for guests." },
-  { icon: "spa", title: "Zuma Spa & Wellness Centre", description: "A full-service spa featuring treatment rooms, couples suites, sauna, steam room, hydrotherapy pool, and a premium beauty salon with skilled therapists." },
+  { icon: "spa", title: "Houzz Hills Spa & Wellness Centre", description: "A full-service spa featuring treatment rooms, couples suites, sauna, steam room, hydrotherapy pool, and a premium beauty salon with skilled therapists." },
   { icon: "conference", title: "Conference & Event Facilities", description: "Three conference rooms with capacities from 10 to 120 delegates. Full AV, high-speed internet, catering, and dedicated event coordination services." },
   { icon: "kitchen", title: "Fully Stocked Premium Kitchen", description: "Every suite features premium built-in appliances — Miele or equivalent — complete with cookware, utensils, and a welcome pantry stocked on arrival." },
   { icon: "laundry", title: "Laundry & Dry Cleaning", description: "Same-day laundry, dry cleaning, and pressing service available daily. Collect and deliver to your door, or drop items at the front desk." },
@@ -54,7 +54,7 @@ export default function AmenitiesPage() {
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=1600&q=80"
-            alt="Zuma Suites amenities"
+            alt="Houzz Hills amenities"
             fill
             className="object-cover"
             priority
@@ -65,7 +65,7 @@ export default function AmenitiesPage() {
           <p className="text-[#C9A84C] text-xs tracking-[0.4em] uppercase mb-4" style={{ fontFamily: "var(--font-inter)" }}>World-Class Facilities</p>
           <h1 className="text-5xl sm:text-6xl text-white" style={{ fontFamily: "var(--font-playfair)" }}>Amenities</h1>
           <p className="text-white/50 mt-4 max-w-xl leading-relaxed" style={{ fontFamily: "var(--font-inter)" }}>
-            Every detail considered. Every comfort included. Zuma Suites delivers an experience that anticipates your every need.
+            Every detail considered. Every comfort included. Houzz Hills delivers an experience that anticipates your every need.
           </p>
         </div>
       </section>

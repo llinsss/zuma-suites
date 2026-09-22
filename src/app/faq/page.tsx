@@ -52,7 +52,7 @@ export default function FAQPage() {
             Still have questions? We&apos;re here to help.
           </p>
           <a
-            href="mailto:reservations@zumasuites.com"
+            href="mailto:reservations@houzzhills.com"
             className="inline-block text-[#C9A84C] text-sm border border-[#C9A84C]/40 hover:border-[#C9A84C] px-6 py-2.5 transition-colors"
             style={{ fontFamily: "var(--font-inter)" }}
           >

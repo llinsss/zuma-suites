@@ -8,7 +8,7 @@ import { BLOG_POSTS } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Blog & Travel Guides",
   description:
-    "Explore travel guides, business travel tips, and things to do in Kaduna State. Expert content from the team at Zuma Suites.",
+    "Explore travel guides, business travel tips, and things to do in Kaduna State. Expert content from the team at Houzz Hills.",
 };
 
 export default function BlogPage() {
@@ -19,7 +19,7 @@ export default function BlogPage() {
       <section className="pt-40 pb-16 max-w-7xl mx-auto px-4 sm:px-6">
         <SectionTitle
           eyebrow="Insights & Guides"
-          title="The Zuma Journal"
+          title="The Houzz Hills Journal"
           subtitle="Travel guides, local insights, and everything you need to know about Kaduna and beyond."
         />
       </section>

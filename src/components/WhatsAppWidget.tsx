@@ -6,7 +6,7 @@ import { MessageCircle, X } from "lucide-react";
 export default function WhatsAppWidget() {
   const [open, setOpen] = useState(false);
   const phone = "2348012345678";
-  const message = encodeURIComponent("Hello! I'd like to make an enquiry about Zuma Suites Kaduna.");
+  const message = encodeURIComponent("Hello! I'd like to make an enquiry about Houzz Hills Kaduna.");
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
@@ -17,14 +17,14 @@ export default function WhatsAppWidget() {
               <MessageCircle size={20} className="text-white" />
             </div>
             <div>
-              <p className="text-white font-semibold text-sm" style={{ fontFamily: "var(--font-inter)" }}>Zuma Suites</p>
+              <p className="text-white font-semibold text-sm" style={{ fontFamily: "var(--font-inter)" }}>Houzz Hills</p>
               <p className="text-green-200 text-xs" style={{ fontFamily: "var(--font-inter)" }}>Typically replies instantly</p>
             </div>
           </div>
           <div className="p-4 bg-[#ECE5DD]">
             <div className="bg-white rounded-lg px-4 py-3 shadow-sm">
               <p className="text-gray-700 text-sm" style={{ fontFamily: "var(--font-inter)" }}>
-                Hello! 👋 Welcome to Zuma Suites Kaduna. How can we assist you today?
+                Hello! 👋 Welcome to Houzz Hills Kaduna. How can we assist you today?
               </p>
               <p className="text-gray-400 text-xs mt-1 text-right" style={{ fontFamily: "var(--font-inter)" }}>Just now</p>
             </div>

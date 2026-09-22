@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { ROOMS, BLOG_POSTS } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://zumasuites.com";
+  const base = "https://houzzhills.com";
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },

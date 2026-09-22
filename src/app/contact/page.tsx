@@ -5,7 +5,7 @@ import SectionTitle from "@/components/SectionTitle";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Zuma Suites Kaduna — reservations, corporate enquiries, event bookings, and general information.",
+    "Get in touch with Houzz Hills Kaduna — reservations, corporate enquiries, event bookings, and general information.",
 };
 
 export default function ContactPage() {
@@ -75,7 +75,7 @@ export default function ContactPage() {
               {[
                 { icon: MapPin, label: "Address", text: "15 Ahmadu Bello Way, CBD\nKaduna, Kaduna State, Nigeria" },
                 { icon: Phone, label: "Phone", text: "+234 801 234 5678\n+234 802 345 6789" },
-                { icon: Mail, label: "Email", text: "reservations@zumasuites.com\nevents@zumasuites.com" },
+                { icon: Mail, label: "Email", text: "reservations@houzzhills.com\nevents@houzzhills.com" },
               ].map(({ icon: Icon, label, text }) => (
                 <div key={label} className="flex gap-4">
                   <div className="w-10 h-10 border border-[#C9A84C]/30 flex items-center justify-center flex-shrink-0">
@@ -96,7 +96,7 @@ export default function ContactPage() {
               For the fastest response, reach us directly on WhatsApp. Our team is available 7am – 11pm daily.
             </p>
             <a
-              href="https://wa.me/2348012345678?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20Zuma%20Suites"
+              href="https://wa.me/2348012345678?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20Houzz%20Hills"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white text-sm font-semibold px-6 py-3 transition-colors"

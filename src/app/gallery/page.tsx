@@ -5,7 +5,7 @@ import SectionTitle from "@/components/SectionTitle";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Browse the gallery of Zuma Suites Kaduna — luxury interiors, rooftop pool, spa, restaurant, and city views.",
+    "Browse the gallery of Houzz Hills Kaduna — luxury interiors, rooftop pool, spa, restaurant, and city views.",
 };
 
 const GALLERY = [
@@ -14,7 +14,7 @@ const GALLERY = [
   { src: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80", alt: "Rooftop Infinity Pool", category: "Amenities", span: "col-span-2 row-span-1" },
   { src: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80", alt: "Suite Bathroom", category: "Rooms", span: "col-span-1 row-span-1" },
   { src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80", alt: "Saffron Restaurant", category: "Dining", span: "col-span-1 row-span-1" },
-  { src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80", alt: "Zuma Spa", category: "Wellness", span: "col-span-1 row-span-1" },
+  { src: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80", alt: "Houzz Hills Spa", category: "Wellness", span: "col-span-1 row-span-1" },
   { src: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80", alt: "Fitness Centre", category: "Amenities", span: "col-span-1 row-span-1" },
   { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80", alt: "Penthouse View", category: "Rooms", span: "col-span-2 row-span-1" },
   { src: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&q=80", alt: "Two-Bedroom Suite", category: "Rooms", span: "col-span-1 row-span-1" },
@@ -30,7 +30,7 @@ export default function GalleryPage() {
       <section className="pt-40 pb-16 max-w-7xl mx-auto px-4 sm:px-6">
         <SectionTitle
           eyebrow="Visual Tour"
-          title="See Zuma Suites"
+          title="See Houzz Hills"
           subtitle="A glimpse into the spaces, textures and experiences that await you."
         />
       </section>

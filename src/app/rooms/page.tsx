@@ -8,7 +8,7 @@ import { ROOMS } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Rooms & Suites",
   description:
-    "Explore Zuma Suites' four luxury suite categories — Studio Deluxe, Executive Suite, Two-Bedroom Suite, and The Zuma Penthouse. Premium furnished apartments in Kaduna.",
+    "Explore Houzz Hills' four luxury suite categories — Studio Deluxe, Executive Suite, Two-Bedroom Suite, and The Houzz Hills Penthouse. Premium furnished apartments in Kaduna.",
 };
 
 export default function RoomsPage() {
@@ -19,7 +19,7 @@ export default function RoomsPage() {
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1600&q=80"
-            alt="Zuma Suites room overview"
+            alt="Houzz Hills room overview"
             fill
             className="object-cover"
             priority

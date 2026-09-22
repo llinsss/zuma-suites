@@ -38,10 +38,10 @@ export default function Navbar() {
             className="text-2xl tracking-widest uppercase text-[#C9A84C]"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Zuma
+            Houzz Hills
           </span>
           <span className="text-[10px] tracking-[0.35em] text-white/60 uppercase font-light" style={{ fontFamily: "var(--font-inter)" }}>
-            Suites · Kaduna
+            Kaduna
           </span>
         </Link>
 

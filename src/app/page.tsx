@@ -8,18 +8,18 @@ import SectionTitle from "@/components/SectionTitle";
 import { ROOMS, TESTIMONIALS } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Zuma Suites Kaduna | Luxury Serviced Apartments — Opening November 2026",
+  title: "Houzz Hills Kaduna | Luxury Serviced Apartments — Opening November 2026",
   description:
-    "Kaduna's most anticipated luxury address. Book your early reservation at Zuma Suites and secure exclusive pre-launch rates. Opening November 2026.",
+    "Kaduna's most anticipated luxury address. Book your early reservation at Houzz Hills and secure exclusive pre-launch rates. Opening November 2026.",
 };
 
 const STRUCTURED_DATA = {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
-  name: "Zuma Suites Kaduna",
+  name: "Houzz Hills Kaduna",
   description:
     "Luxury serviced apartments in Kaduna State, Nigeria. Opening November 2026.",
-  url: "https://zumasuites.com",
+  url: "https://houzzhills.com",
   telephone: "+2348012345678",
   address: {
     "@type": "PostalAddress",
@@ -50,7 +50,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=90"
-            alt="Zuma Suites Kaduna luxury exterior"
+            alt="Houzz Hills Kaduna luxury exterior"
             fill
             className="object-cover"
             priority
@@ -76,7 +76,7 @@ export default function HomePage() {
             className="text-white/60 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed"
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            Zuma Suites redefines premium living in Kaduna State. Fully serviced apartments crafted for discerning travellers, executives, and families.
+            Houzz Hills redefines premium living in Kaduna State. Fully serviced apartments crafted for discerning travellers, executives, and families.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -139,9 +139,9 @@ export default function HomePage() {
       <section className="py-24 px-4 sm:px-6 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <SectionTitle
-            eyebrow="The Zuma Experience"
+            eyebrow="The Houzz Hills Experience"
             title="A New Standard of Living in Kaduna"
-            subtitle="From the moment you step in, Zuma Suites announces itself — not loudly, but with the quiet confidence of exceptional design, impeccable service, and an address that says everything."
+            subtitle="From the moment you step in, Houzz Hills announces itself — not loudly, but with the quiet confidence of exceptional design, impeccable service, and an address that says everything."
           />
           <div className="grid grid-cols-2 gap-6 mt-10">
             {[
@@ -160,7 +160,7 @@ export default function HomePage() {
         <div className="relative h-[500px]">
           <Image
             src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80"
-            alt="Zuma Suites interior lobby"
+            alt="Houzz Hills interior lobby"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -200,7 +200,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=1600&q=80"
-            alt="Zuma Suites pool"
+            alt="Houzz Hills pool"
             fill
             className="object-cover"
           />
@@ -232,7 +232,7 @@ export default function HomePage() {
           <SectionTitle
             eyebrow="Guest Stories"
             title="What Our Early Guests Say"
-            subtitle="Hear from those who experienced Zuma Suites at our exclusive preview events."
+            subtitle="Hear from those who experienced Houzz Hills at our exclusive preview events."
             center
           />
           <div className="grid md:grid-cols-3 gap-6 mt-14">
