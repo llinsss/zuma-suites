@@ -1,129 +1,215 @@
-import type { Metadata } from "next";
-import Image from "next/image";
+"use client";
+import { useState } from "react";
+import { useApp } from "@/store/AppContext";
+import { Card, Badge, Button, StatusDot, SectionHeader } from "@/components/ui";
+import { formatNGN, ROOM_STATUS_CONFIG, ROOM_TYPE_CONFIG, cn } from "@/lib/utils";
+import type { RoomStatus, RoomType } from "@/types";
 import Link from "next/link";
-import { Users, BedDouble, Bath, Maximize, ArrowRight, CheckCircle } from "lucide-react";
-import SectionTitle from "@/components/SectionTitle";
-import { ROOMS } from "@/lib/data";
-
-export const metadata: Metadata = {
-  title: "Rooms & Suites",
-  description:
-    "Explore Houzz Hills' four luxury suite categories — Studio Deluxe, Executive Suite, Two-Bedroom Suite, and The Houzz Hills Penthouse. Premium furnished apartments in Kaduna.",
-};
 
 export default function RoomsPage() {
-  return (
-    <>
-      {/* Header */}
-      <section className="relative pt-40 pb-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1600&q=80"
-            alt="Houzz Hills room overview"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/75" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          <p className="text-[#C9A84C] text-xs tracking-[0.4em] uppercase mb-4" style={{ fontFamily: "var(--font-inter)" }}>
-            Accommodation
-          </p>
-          <h1 className="text-5xl sm:text-6xl text-white" style={{ fontFamily: "var(--font-playfair)" }}>
-            Rooms & Suites
-          </h1>
-          <p className="text-white/50 mt-4 max-w-xl leading-relaxed" style={{ fontFamily: "var(--font-inter)" }}>
-            Four categories of luxury living, each designed to meet a different need — yet all sharing the same uncompromising standard.
-          </p>
-        </div>
-      </section>
+  const { state, dispatch } = useApp();
+  const [filter, setFilter] = useState<RoomStatus | "all">("all");
+  const [typeFilter, setTypeFilter] = useState<RoomType | "all">("all");
+  const [view, setView] = useState<"grid" | "list">("grid");
 
-      {/* Rooms */}
-      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 space-y-20">
-        {ROOMS.map((room, i) => (
-          <div
-            key={room.id}
-            className={`grid lg:grid-cols-2 gap-12 items-center ${i % 2 !== 0 ? "lg:grid-flow-dense" : ""}`}
-          >
-            <div className={`relative h-[400px] overflow-hidden ${i % 2 !== 0 ? "lg:col-start-2" : ""}`}>
-              <Image
-                src={room.image}
-                alt={room.name}
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              {room.badge && (
-                <div className="absolute top-5 right-5 bg-[#C9A84C] text-black text-xs font-semibold tracking-widest uppercase px-4 py-1.5" style={{ fontFamily: "var(--font-inter)" }}>
-                  {room.badge}
-                </div>
-              )}
-            </div>
-
-            <div className={i % 2 !== 0 ? "lg:col-start-1 lg:row-start-1" : ""}>
-              <p className="text-[#C9A84C] text-xs tracking-widest uppercase mb-2" style={{ fontFamily: "var(--font-inter)" }}>
-                {room.floor}
-              </p>
-              <h2 className="text-3xl sm:text-4xl text-white mb-2" style={{ fontFamily: "var(--font-playfair)" }}>
-                {room.name}
-              </h2>
-              <p className="text-[#C9A84C] text-sm italic mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-                {room.tagline}
-              </p>
-              <p className="text-white/60 leading-relaxed mb-6" style={{ fontFamily: "var(--font-inter)" }}>
-                {room.description}
-              </p>
-
-              <div className="flex flex-wrap gap-5 text-white/50 text-sm mb-6" style={{ fontFamily: "var(--font-inter)" }}>
-                <span className="flex items-center gap-2"><Maximize size={15} className="text-[#C9A84C]" /> {room.size}</span>
-                <span className="flex items-center gap-2"><Users size={15} className="text-[#C9A84C]" /> {room.guests} Guests</span>
-                <span className="flex items-center gap-2"><BedDouble size={15} className="text-[#C9A84C]" /> {room.beds}</span>
-                <span className="flex items-center gap-2"><Bath size={15} className="text-[#C9A84C]" /> {room.baths} Bath</span>
-              </div>
-
-              <div className="grid grid-cols-2 gap-2 mb-8">
-                {room.amenities.map((a) => (
-                  <div key={a} className="flex items-center gap-2 text-white/50 text-sm" style={{ fontFamily: "var(--font-inter)" }}>
-                    <CheckCircle size={13} className="text-[#C9A84C] flex-shrink-0" />
-                    {a}
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-white/30 text-xs tracking-wider uppercase" style={{ fontFamily: "var(--font-inter)" }}>From</p>
-                  <p className="text-[#C9A84C] text-2xl font-semibold" style={{ fontFamily: "var(--font-inter)" }}>
-                    ₦{room.price.toLocaleString()}<span className="text-white/30 text-sm font-normal"> /night</span>
-                  </p>
-                </div>
-                <Link
-                  href="/reserve"
-                  className="flex items-center gap-2 bg-[#C9A84C] hover:bg-[#E8C97A] text-black text-sm font-semibold tracking-widest uppercase px-6 py-3 transition-all"
-                  style={{ fontFamily: "var(--font-inter)" }}
-                >
-                  Reserve <ArrowRight size={14} />
-                </Link>
-              </div>
-            </div>
-          </div>
-        ))}
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-[#0D0D0D] border-t border-[#C9A84C]/10 text-center px-4">
-        <p className="text-white/50 mb-4" style={{ fontFamily: "var(--font-inter)" }}>
-          Need help choosing the right suite?
-        </p>
-        <Link
-          href="/contact"
-          className="inline-flex items-center gap-2 border border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-black text-sm tracking-widest uppercase px-8 py-3 transition-all"
-          style={{ fontFamily: "var(--font-inter)" }}
-        >
-          Talk to Our Team <ArrowRight size={14} />
-        </Link>
-      </section>
-    </>
+  const filtered = state.rooms.filter(r =>
+    (filter === "all" || r.status === filter) &&
+    (typeFilter === "all" || r.type === typeFilter)
   );
+
+  const counts = state.rooms.reduce((acc, r) => {
+    acc[r.status] = (acc[r.status] || 0) + 1;
+    return acc;
+  }, {} as Record<string, number>);
+
+  return (
+    <div className="p-6 space-y-6 max-w-[1400px]">
+      <SectionHeader
+        title="Rooms"
+        subtitle="Manage room status, rates, and availability"
+        action={
+          <div className="flex gap-2">
+            <Button variant="secondary" size="sm" onClick={() => setView(v => v === "grid" ? "list" : "grid")}>
+              {view === "grid" ? <ListIcon /> : <GridIcon />}
+              {view === "grid" ? "List" : "Grid"}
+            </Button>
+            <Button size="sm">+ Add Room</Button>
+          </div>
+        }
+      />
+
+      {/* Status summary bar */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2">
+        {Object.entries(ROOM_STATUS_CONFIG).map(([key, cfg]) => (
+          <button
+            key={key}
+            onClick={() => setFilter(filter === key as RoomStatus ? "all" : key as RoomStatus)}
+            className={cn(
+              "p-3 rounded-xl border text-left transition-all",
+              filter === key
+                ? `${cfg.bg} border-current/20`
+                : "bg-[var(--surface-0)] border-[var(--border)] hover:bg-[var(--surface-1)]"
+            )}
+          >
+            <div className="flex items-center gap-1.5 mb-1">
+              <StatusDot color={cfg.dot} />
+              <span className="text-lg font-bold text-[var(--text-primary)]">{counts[key] || 0}</span>
+            </div>
+            <p className={`text-xs font-medium ${cfg.color}`}>{cfg.label}</p>
+          </button>
+        ))}
+      </div>
+
+      {/* Type filter */}
+      <div className="flex gap-2 flex-wrap">
+        {(["all", "studio", "one_bedroom", "two_bedroom"] as const).map(t => (
+          <button
+            key={t}
+            onClick={() => setTypeFilter(t)}
+            className={cn(
+              "px-3 py-1.5 rounded-lg text-sm font-medium transition-all border",
+              typeFilter === t
+                ? "bg-brand-500 text-white border-brand-500"
+                : "bg-[var(--surface-0)] border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--surface-1)]"
+            )}
+          >
+            {t === "all" ? "All Types" : ROOM_TYPE_CONFIG[t].label}
+          </button>
+        ))}
+        <span className="ml-auto text-sm text-[var(--text-muted)] self-center">{filtered.length} rooms</span>
+      </div>
+
+      {/* Room grid */}
+      {view === "grid" ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {filtered.map(room => {
+            const cfg = ROOM_STATUS_CONFIG[room.status];
+            const res = state.reservations.find(r => r.id === room.currentReservationId);
+            return (
+              <Card key={room.id} hover className="overflow-hidden">
+                {/* Color header */}
+                <div className={`h-2 ${cfg.dot}`} />
+                <div className="p-4">
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-2xl font-bold text-[var(--text-primary)]">{room.number}</span>
+                        <Badge color={cfg.color} bg={cfg.bg}>
+                          <StatusDot color={cfg.dot} pulse={room.status === "occupied"} />
+                          {cfg.label}
+                        </Badge>
+                      </div>
+                      <p className="text-sm text-[var(--text-muted)] mt-0.5">{room.name}</p>
+                    </div>
+                    <span className="text-xs font-semibold px-2 py-1 rounded-md bg-[var(--surface-1)] text-[var(--text-muted)]">
+                      {ROOM_TYPE_CONFIG[room.type].shortLabel}
+                    </span>
+                  </div>
+
+                  {/* Rate */}
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">
+                    {formatNGN(room.baseRate)}<span className="text-xs font-normal text-[var(--text-muted)]">/night</span>
+                  </p>
+
+                  {/* Current guest */}
+                  {res && (
+                    <div className="mt-3 p-2.5 rounded-lg bg-[var(--surface-1)]">
+                      <p className="text-xs font-medium text-[var(--text-primary)]">
+                        {res.guest?.firstName} {res.guest?.lastName}
+                      </p>
+                      <p className="text-xs text-[var(--text-muted)]">
+                        CO: {res.checkOut} · {res.nights}N
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Amenities */}
+                  <div className="mt-3 flex flex-wrap gap-1">
+                    {room.amenities.slice(0, 3).map(a => (
+                      <span key={a} className="text-[10px] px-1.5 py-0.5 rounded bg-[var(--surface-1)] text-[var(--text-muted)]">{a}</span>
+                    ))}
+                    {room.amenities.length > 3 && (
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-[var(--surface-1)] text-[var(--text-muted)]">+{room.amenities.length - 3}</span>
+                    )}
+                  </div>
+
+                  {/* Quick status change */}
+                  <div className="mt-3 pt-3 border-t border-[var(--border)] flex gap-2">
+                    <Link href={`/rooms/${room.id}`} className="flex-1">
+                      <Button variant="secondary" size="sm" className="w-full">Details</Button>
+                    </Link>
+                    {room.status === "dirty" && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => dispatch({ type: "UPDATE_ROOM_STATUS", payload: { roomId: room.id, status: "clean" } })}
+                      >
+                        Mark Clean
+                      </Button>
+                    )}
+                    {room.status === "clean" && (
+                      <Button
+                        size="sm"
+                        onClick={() => dispatch({ type: "UPDATE_ROOM_STATUS", payload: { roomId: room.id, status: "inspected" } })}
+                      >
+                        Inspect
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              </Card>
+            );
+          })}
+        </div>
+      ) : (
+        <Card className="overflow-table">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-[var(--border)]">
+                {["Room", "Name", "Type", "Status", "Rate/Night", "Guest", "Floor", "Actions"].map(h => (
+                  <th key={h} className="px-4 py-3 text-left text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[var(--border)]">
+              {filtered.map(room => {
+                const cfg = ROOM_STATUS_CONFIG[room.status];
+                const res = state.reservations.find(r => r.id === room.currentReservationId);
+                return (
+                  <tr key={room.id} className="hover:bg-[var(--surface-1)] transition-colors">
+                    <td className="px-4 py-3 font-bold text-[var(--text-primary)]">{room.number}</td>
+                    <td className="px-4 py-3 text-[var(--text-secondary)]">{room.name}</td>
+                    <td className="px-4 py-3 text-[var(--text-muted)]">{ROOM_TYPE_CONFIG[room.type].label}</td>
+                    <td className="px-4 py-3">
+                      <Badge color={cfg.color} bg={cfg.bg}>
+                        <StatusDot color={cfg.dot} />
+                        {cfg.label}
+                      </Badge>
+                    </td>
+                    <td className="px-4 py-3 font-medium text-[var(--text-primary)]">{formatNGN(room.baseRate)}</td>
+                    <td className="px-4 py-3 text-[var(--text-secondary)]">
+                      {res ? `${res.guest?.firstName} ${res.guest?.lastName}` : "—"}
+                    </td>
+                    <td className="px-4 py-3 text-[var(--text-muted)]">Floor {room.floor}</td>
+                    <td className="px-4 py-3">
+                      <Link href={`/rooms/${room.id}`}>
+                        <Button variant="ghost" size="sm">View</Button>
+                      </Link>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </Card>
+      )}
+    </div>
+  );
+}
+
+function GridIcon() {
+  return <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>;
+}
+function ListIcon() {
+  return <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>;
 }

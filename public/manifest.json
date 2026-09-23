@@ -1,0 +1,16 @@
+{
+  "name": "Houzzhills HMS",
+  "short_name": "Houzzhills",
+  "description": "Property Management System for Houzzhills Apartments, Kaduna",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#fafaf9",
+  "theme_color": "#c8861a",
+  "orientation": "any",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "en-NG"
+}

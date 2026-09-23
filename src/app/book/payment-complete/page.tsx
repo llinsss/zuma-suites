@@ -1,0 +1,12 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+type PaymentState = { confirmationNumber?: string; status?: string; paymentStatus?: string; error?: string };
+export default function PaymentCompletePage() {
+  const [reservationId] = useState(() => typeof window === "undefined" ? "" : new URLSearchParams(window.location.search).get("reservationId") ?? ""); const [state, setState] = useState<PaymentState>({}); const [attempts, setAttempts] = useState(0);
+  useEffect(() => { if (!reservationId) return; let cancelled = false; const check = async () => { const response = await fetch(`/api/booking/payments/status?reservationId=${encodeURIComponent(reservationId)}`, { cache: "no-store" }); const data = await response.json(); if (!cancelled) { setState(data); setAttempts((value) => value + 1); } }; void check(); const timer = window.setInterval(() => void check(), 2500); return () => { cancelled = true; window.clearInterval(timer); }; }, [reservationId]);
+  const confirmed = state.paymentStatus === "SUCCESS" || state.status === "CONFIRMED"; const gaveUp = attempts > 12 && !confirmed;
+  return <main className="min-h-screen bg-stone-50 px-5 py-16 text-stone-900"><div className="mx-auto max-w-lg rounded-3xl border border-stone-200 bg-white p-8 text-center shadow-sm"><div className={`mx-auto grid h-16 w-16 place-items-center rounded-full text-2xl ${confirmed ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>{confirmed ? "✓" : "…"}</div><p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-amber-700">Houzzhills apartments</p><h1 className="mt-3 text-3xl font-semibold">{!reservationId ? "Payment reference missing" : confirmed ? "Booking confirmed" : gaveUp ? "Payment still processing" : "Confirming your payment"}</h1><p className="mt-4 text-sm leading-6 text-stone-500">{!reservationId ? "Please return to the booking page and try again." : state.error ?? (confirmed ? `Your confirmation number is ${state.confirmationNumber}. We have received your payment.` : gaveUp ? "We have not lost your payment. Please check your email shortly or contact the property if this remains pending." : "Please keep this page open while we verify the transaction securely.")}</p>{confirmed || gaveUp || !reservationId ? <Link href="/book" className="mt-7 inline-flex h-11 items-center rounded-xl bg-stone-900 px-5 text-sm font-semibold text-white">Return to booking</Link> : <div className="mt-7 text-xs text-stone-400">Checking securely…</div>}</div></main>;
+}
